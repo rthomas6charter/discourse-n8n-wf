@@ -15,7 +15,7 @@ function isWorkflow(json) {
 function workflowCode(json) {
   console.log(json);
   return `<div class="workflow_preview" fromfork="true">
-            <n8n-demo workflow='${encodeURIComponent(JSON.stringify(json)).replaceAll("'", '%27')}' frame=true src=\"${siteSettings["n8n-core-url"]}\"></n8n-demo>
+            <n8n-demo workflow='${encodeURIComponent(JSON.stringify(json)).replaceAll("'", '%27')}' frame=true src=\"${this.siteSettings["n8n-core-url"]}\"></n8n-demo>
           </div>`
 }
 
