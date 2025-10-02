@@ -12,10 +12,11 @@ function isWorkflow(json) {
   return json && json['nodes'] && Array.isArray(json['nodes']) && json['nodes'][0]['type'];
 }
 
+// TODO: Find out how to access siteSettings in this context to put n8n-core-url in the src URL value
 function workflowCode(json) {
   console.log(json);
   return `<div class="workflow_preview" fromfork="true">
-            <n8n-demo workflow='${encodeURIComponent(JSON.stringify(json)).replaceAll("'", '%27')}' frame=true src=\"${this.siteSettings["n8n-core-url"]}\"></n8n-demo>
+            <n8n-demo workflow='${encodeURIComponent(JSON.stringify(json)).replaceAll("'", '%27')}' frame=true src=\"https://charterdev-n8n.liveintellect.com/workflows/demo\"></n8n-demo>
           </div>`
 }
 
