@@ -16,7 +16,7 @@ function isWorkflow(json) {
 function workflowCode(json) {
   console.log(json);
   return `<div class="workflow_preview" fromfork="true">
-            <n8n-demo workflow='${encodeURIComponent(JSON.stringify(json)).replaceAll("'", '%27')}' frame=true src=\"https://charterdev-n8n.liveintellect.com/workflows/demo\"></n8n-demo>
+            <n8n-demo workflow='${encodeURIComponent(JSON.stringify(json)).replaceAll("'", '%27')}' frame=true src=\"https://charterdev-n8n-preview-service.liveintellect.com/workflows/demo\"></n8n-demo>
           </div>`
 }
 
